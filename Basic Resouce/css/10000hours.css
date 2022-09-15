@@ -1,0 +1,200 @@
+/* Font */
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+}
+
+:root {
+    font-family: 'GmarketSansMedium';
+    /* input, button에는 왜 적용이 안 될까? */
+}
+
+/* Layouts */
+body {
+    width: 1920px;
+    height: 1963px;
+    background-color: #5B2386;
+}
+
+.cont-modal {
+    display: none;
+}
+
+.blind {
+    display: none;
+}
+
+/* Components */
+#app {
+    text-align: center;
+}
+
+.img-title {
+    position: relative;
+    margin-top: 273px;
+    width: 564px;
+    height: 112px;
+    left: 100px;
+    bottom: 55px;
+}
+
+.img-clock {
+    position: relative;
+    margin-top: 140px;
+    width: 221.6px;
+    height: 225px;
+    right: 300px;
+}
+
+.txt-quo {
+    margin-top: 66px;
+    font-family: 'OTEnjoystoriesBA';
+    font-size: 36px;
+    color: #F5DF4D;
+}
+
+.img-quo {
+    position: relative;
+    top: 120px;
+}
+
+.txt-desc {
+    /* margin값을 주지 않아도, .txt-quo와의 공백이 있는데 어떻게 생긴 공백인지 모르겠다. 공백 없이 margin-top: 78px을 주고 싶다. */
+    margin-top: 78px;
+    font-size: 18px;
+    /* Figma에 나온대로 line-height: 24px을 하면 행간이 좁아서 30px로 끼워맞췄다. */
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.tit-desc {
+    font-family: 'GmarketSansBold';
+    /* 왜인지 strong 적용이 안 되고, font-weight: 700도 되지 않아서 bold 폰트를 줬다. */
+}
+
+.cont-inp {
+    margin-top: 102px;
+}
+
+.btn-exc {
+    margin-top: 115px;
+    width: 565px;
+    height: 66px;
+    border-radius: 56px;
+    background-color: #FCEE21;
+    font-family: 'GmarketSansBold';
+    font-size: 24px;
+    line-height: 24px;
+    color: #5B2386;
+}
+
+.img-click {
+    position: relative;
+    top: 50px
+}
+
+.cont-result {
+    margin-top: 147px;
+}
+
+.txt-wannabe {
+    font-size: 24px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.inp-txt {
+    margin-bottom: 27px;
+    width: 228px;
+    height: 57px;
+    border-radius: 7px;
+    text-align: center;
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    line-height: 24px;
+    color: #BABCBE;
+}
+
+.txt-time {
+    /* p 태그의 높이가 콘텐츠의 높이보다 높게 잡혀서 아래에 나올 btn-exc, btn-go, btn-share와의 정확한 margin값을 계산하기 어렵다. */
+    font-size: 24px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.cont-desc {
+    /* 왜인지 strong 적용이 안 돼서 font-weight: 700를 줬다. */
+    font-weight: 700;
+    font-size: 72px;
+    /* Figma에 나온대로 line-height: 72px을 하면 행간이 좁아서 90px로 끼워맞췄다. */
+    line-height: 90px;
+}
+
+.btn-go {
+    margin-top: 151px;
+    width: 356px;
+    height: 66px;
+    border-radius: 56px;
+    background-color: #FCEE21;
+    font-family: 'GmarketSansBold';
+    font-size: 24px;
+    line-height: 24px;
+    color: #5B2386;
+}
+
+.btn-share {
+    margin-top: 151px;
+    width: 191px;
+    height: 66px;
+    border-radius: 56px;
+    background-color: #FFFFFF;
+    font-family: 'GmarketSansBold';
+    font-size: 24px;
+    line-height: 24px;
+    color: #5B2386;
+}
+
+.cont-footer {
+    margin-top: 136.36px;
+    text-align: center;
+}
+
+.img-logo {
+    /* 부모인 .cont-footer에게 text-align: center를 줬는데도 불구하고, display: inline-block으로는 가운데 정렬이 되지 않았다. */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.txt-footer {
+    font-family: 'Noto Sans KR';
+    font-size: 12px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
